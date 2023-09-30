@@ -8,6 +8,14 @@ let content = {
     sign: 0
 };
 
+let content2 = {
+    to: "",
+    from: "",
+    recipient: "",
+    text: "",
+    sign: 0
+};
+
 window.onload = function () {
 
     loadingPage();
@@ -21,6 +29,21 @@ window.onload = function () {
         content.sign = getPureStr(content.from).pxWidth('18px Satisfy, serif');
         document.title = result.title;
         $('#recipient').append(content.to);
+        $('#flipback').text(result.sender);
+        if (result.stamp != null) {
+            $('#stamp img').attr('src', result.stamp);
+        }
+        toBase64(result.bgm);
+    });
+
+    $.getJSON("./font/content2.json", function (result) {
+        content2.to = result.to;
+        content2.from = result.from;
+        content2.recipient = result.recipient;
+        content2.text = result.text;
+        content2.sign = getPureStr(content2.from).pxWidth('18px Satisfy, serif');
+        document.title = result.title;
+        $('#recipient').append(content2.to);
         $('#flipback').text(result.sender);
         if (result.stamp != null) {
             $('#stamp img').attr('src', result.stamp);
