@@ -43,7 +43,7 @@ window.onload = function () {
         content2.text = result.text;
         content2.sign = getPureStr(content2.from).pxWidth('18px Satisfy, serif');
         document.title = result.title;
-        $('#recipient').append(content2.to);
+        $('#recipient2').append(content2.to);
         $('#flipback').text(result.sender);
         if (result.stamp != null) {
             $('#stamp img').attr('src', result.stamp);
