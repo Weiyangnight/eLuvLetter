@@ -1,10 +1,10 @@
 {
-    "to": "哈哈哈",
-    "from": "李希",
-    "recipient": "哈秋",
-    "sender": "Mika",
-    "title": "eLuvLetter",
+    "to": "曹钊",
+    "from": "lsj",
+    "recipient": "曹钊2",
+    "sender": "lsj2",
+    "title": "曹钊标题",
     "stamp": "./img/stamp.png",
     "bgm": "./bgm/bgm.mp3",
-    "text": "测试内容1"
+    "text": "曹钊正文"
 }
