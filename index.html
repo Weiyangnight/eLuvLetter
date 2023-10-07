@@ -1,75 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="description" content="Put on headphones" />
-	<title>eLuvLetter</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Letter</title>
+	<style>
+		body {
+			/* 设置背景渐变颜色为樱花粉 */
+			background-image: linear-gradient(to left, #FFC0CB, #FF69B4);
+			display: flex;
+			justify-content: center;
+			margin: 0;
+			padding: 0;
+		}
 
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/letter.css" />
-	<link rel="stylesheet" href="css/sakura.css" />
-	<link rel="stylesheet" href="css/typed.css" />
-	<link rel="stylesheet" href="css/bgm.css" />
+		.a {
+			position: relative;
+			top: 100px;
+			width: 1100px;
+			height: 550px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
+			display: flex;
+		}
 
-	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="js/sakura.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/typed.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/bgm.js" type="text/javascript" charset="utf-8"></script>
+		.b {
+			width: 800px;
+			height: 550px;
+			background-image: url("./img/14.jpg");
+			/* 让图片适应大小 */
+			background-size: cover;
+		}
+
+		.c {
+			width: 300px;
+			height: 550px;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.d {
+			width: 250px;
+			height: 500px;
+		}
+
+		.d h1 {
+			font: 900 30px '';
+		}
+
+		.e {
+			width: 230px;
+			margin: 20px 0;
+			outline: none;
+			border: 0;
+			padding: 10px;
+			border-bottom: 3px solid rgb(231, 138, 185);
+			/* 樱花粉色 */
+			font: 900 16px '';
+		}
+
+		.f {
+			float: right;
+			margin: 10px 0;
+		}
+
+		.g {
+			position: absolute;
+			margin: 20px;
+			bottom: 40px;
+			display: block;
+			width: 200px;
+			height: 60px;
+			font: 900 30px '';
+			text-decoration: none;
+			line-height: 50px;
+			border-radius: 30px;
+			background-image: linear-gradient(to left, #f5b5c0, #e9a2c5);
+			/* 樱花粉色渐变 */
+			text-align: center;
+		}
+	</style>
 </head>
 
-<body class="unselect">
-	<div id="jsi-cherry-container">
-		<div class="heart"></div>
-	</div>
-
-	<div id="envelope">
-		<section class="container" id="contact">
-			<form class="flip">
-				<div class="front">
-					<a id="stamp" href="#"><img></a>
-					<span id="recipient2"></span>
-				</div>
-				<div id="content" class="back">
-					<div id="letter">
-						<div class="container">
-							<div class="flip">
-								<div class="front"></div>
-								<div class="back">
-									<div id="data">
-										<p class="letter"></p>
-									</div>
-									<a id="close" href="#"></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="top">
-						<a id="wax-half" href="#"></a>
-						<a id="flipback" href="#contact">♥</a>
-					</div>
-					<div id="lid" class="container">
-						<div class="flip">
-							<div class="front">
-								<a id="open" href="#content"><span id="wax"></span></a>
-							</div>
-							<div class="back"></div>
-						</div>
-					</div>
-				</div>
-			</form>
-		</section>
-
-		<div id="footer">
-			<audio id="music" preload="auto" loop></audio>
-			<a id="music_btn" class="play" href="javascript:playPause();"></a>
+<body>
+	<div class="a">
+		<div class="b"></div>
+		<div class="c">
+			<div class="d">
+				<h1>Login/Register</h1>
+				<input type="text" class="e" placeholder="YOUR NAME">
+				<input type="text" class="e" placeholder="ACCOUNT">
+				<a href="#" class="g" onclick="navigateToPage()">Check</a>
+			</div>
 		</div>
 	</div>
+
+	<script>
+		function navigateToPage() {
+			var yourname = document.querySelector(".e").value; // 获取输入框的值
+
+			// 根据输入的信息导航到不同的网页
+			if (yourname === "曹钊") {
+				window.location.href = "曹钊.html";
+			} else if (yourname === "张馨") {
+				window.location.href = "张馨.html";
+			} else if (yourname === "詹俊滔") {
+				window.location.href = "詹俊滔.html";
+			} else if (yourname === "黄思伟") {
+				window.location.href = "黄思伟.html";
+			} else {
+				alert("无效的信息，请输入有效的信息。");
+			}
+		}
+	</script>
 </body>
-<script src="js/letter2.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

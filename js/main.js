@@ -16,6 +16,22 @@ let content2 = {
     sign: 0
 };
 
+let content3 = {
+    to: "",
+    from: "",
+    recipient: "",
+    text: "",
+    sign: 0
+};
+
+let content4 = {
+    to: "",
+    from: "",
+    recipient: "",
+    text: "",
+    sign: 0
+};
+
 window.onload = function () {
 
     loadingPage();
@@ -28,6 +44,7 @@ window.onload = function () {
         content.text = result.text;
         content.sign = getPureStr(content.from).pxWidth('18px Satisfy, serif');
         document.title = result.title;
+        console.log(result.title);
         $('#recipient').append(content.to);
         $('#flipback').text(result.sender);
         if (result.stamp != null) {
@@ -43,7 +60,40 @@ window.onload = function () {
         content2.text = result.text;
         content2.sign = getPureStr(content2.from).pxWidth('18px Satisfy, serif');
         document.title = result.title;
+        console.log(result.title);
         $('#recipient2').append(content2.to);
+        $('#flipback').text(result.sender);
+        if (result.stamp != null) {
+            $('#stamp img').attr('src', result.stamp);
+        }
+        toBase64(result.bgm);
+    });
+
+    $.getJSON("./font/content3.json", function (result) {
+        content3.to = result.to;
+        content3.from = result.from;
+        content3.recipient = result.recipient;
+        content3.text = result.text;
+        content3.sign = getPureStr(content3.from).pxWidth('18px Satisfy, serif');
+        document.title = result.title;
+        console.log(result.title);
+        $('#recipient3').append(content3.to);
+        $('#flipback').text(result.sender);
+        if (result.stamp != null) {
+            $('#stamp img').attr('src', result.stamp);
+        }
+        toBase64(result.bgm);
+    });
+
+    $.getJSON("./font/content4.json", function (result) {
+        content4.to = result.to;
+        content4.from = result.from;
+        content4.recipient = result.recipient;
+        content4.text = result.text;
+        content4.sign = getPureStr(content4.from).pxWidth('18px Satisfy, serif');
+        document.title = result.title;
+        console.log(result.title);
+        $('#recipient4').append(content4.to);
         $('#flipback').text(result.sender);
         if (result.stamp != null) {
             $('#stamp img').attr('src', result.stamp);

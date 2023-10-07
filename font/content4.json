@@ -1,0 +1,10 @@
+{
+    "to": "黄思伟",
+    "from": "lsj",
+    "recipient": "黄思伟2",
+    "sender": "lsj23",
+    "title": "Letter",
+    "stamp": "./img/stamp.png",
+    "bgm": "./bgm/bgm.mp3",
+    "text": "黄思伟正文"
+}

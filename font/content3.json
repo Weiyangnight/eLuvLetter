@@ -1,10 +1,10 @@
 {
-    "to": "曹钊",
-    "from": "lsj",
-    "recipient": "曹钊2",
+    "to": "张馨",
+    "from": "lsj111",
+    "recipient": "张馨2",
     "sender": "lsj2",
     "title": "Letter",
     "stamp": "./img/stamp.png",
     "bgm": "./bgm/bgm.mp3",
-    "text": "曹钊正文"
+    "text": "张馨正文"
 }
