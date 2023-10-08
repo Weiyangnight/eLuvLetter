@@ -5,117 +5,44 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Letter</title>
-	<style>
-		body {
-			/* 设置背景渐变颜色为樱花粉 */
-			background-image: linear-gradient(to left, #FFC0CB, #FF69B4);
-			display: flex;
-			justify-content: center;
-			margin: 0;
-			padding: 0;
-		}
-
-		.a {
-			position: relative;
-			top: 100px;
-			width: 1100px;
-			height: 550px;
-			box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
-			display: flex;
-		}
-
-		.b {
-			width: 800px;
-			height: 550px;
-			background-image: url("./img/14.jpg");
-			/* 让图片适应大小 */
-			background-size: cover;
-		}
-
-		.c {
-			width: 300px;
-			height: 550px;
-			background-color: white;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.d {
-			width: 250px;
-			height: 500px;
-		}
-
-		.d h1 {
-			font: 900 30px '';
-		}
-
-		.e {
-			width: 230px;
-			margin: 20px 0;
-			outline: none;
-			border: 0;
-			padding: 10px;
-			border-bottom: 3px solid rgb(231, 138, 185);
-			/* 樱花粉色 */
-			font: 900 16px '';
-		}
-
-		.f {
-			float: right;
-			margin: 10px 0;
-		}
-
-		.g {
-			position: absolute;
-			margin: 20px;
-			bottom: 40px;
-			display: block;
-			width: 200px;
-			height: 60px;
-			font: 900 30px '';
-			text-decoration: none;
-			line-height: 50px;
-			border-radius: 30px;
-			background-image: linear-gradient(to left, #f5b5c0, #e9a2c5);
-			/* 樱花粉色渐变 */
-			text-align: center;
-		}
-	</style>
+	<title>小拓の 收信箱</title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-	<div class="a">
-		<div class="b"></div>
-		<div class="c">
-			<div class="d">
-				<h1>Login/Register</h1>
-				<input type="text" class="e" placeholder="YOUR NAME">
-				<input type="text" class="e" placeholder="ACCOUNT">
-				<a href="#" class="g" onclick="navigateToPage()">Check</a>
+
+	<div class="main">
+		<div class="login">
+			<div class="login-form-box">
+				<p class="login-title">小拓の 收信箱</p>
+				<p class="login-sub-title">查 看 信 件</p>
+				<form class="login-form">
+					<input type="text" name="username" id="username" class="username special-input"
+						placeholder="Your Name" autocomplete="off">
+					<input type="password" name="password" id="password" class="password" placeholder="Password"
+						autocomplete="off">
+					<!-- <div class="remember-box">
+                        <input type="checkbox" name="remember" id="remember" class="remember" value="remember">记住我
+                    </div> -->
+					<!-- <input type="button" id="login-button"> -->
+					<input type="button" id="navigate-button" onclick="navigateToPage()">
+
+
+				</form>
+				<!-- <div class="link">
+                    <a href="#" class="create">创建账号</a>
+                    <a href="#" class="error">无法登陆？</a>
+                </div> -->
+			</div>
+			<div class="login-background">
+				<img src="" alt="" id="background">
+				<!-- <img src="images/三叶.png" alt="三叶.png"> -->
+				<!-- <img src="images/泷.png" alt="泷.png"> -->
 			</div>
 		</div>
 	</div>
-
-	<script>
-		function navigateToPage() {
-			var yourname = document.querySelector(".e").value; // 获取输入框的值
-
-			// 根据输入的信息导航到不同的网页
-			if (yourname === "曹钊") {
-				window.location.href = "曹钊.html";
-			} else if (yourname === "张馨") {
-				window.location.href = "张馨.html";
-			} else if (yourname === "詹俊滔") {
-				window.location.href = "詹俊滔.html";
-			} else if (yourname === "黄思伟") {
-				window.location.href = "黄思伟.html";
-			} else {
-				alert("无效的信息，请输入有效的信息。");
-			}
-		}
-	</script>
 </body>
+
+<script src="js/index.js"></script>
 
 </html>
