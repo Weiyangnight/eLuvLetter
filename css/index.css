@@ -166,21 +166,8 @@ body,
     height: 100%;
 }
 
-/* 在小屏幕上的样式 */
 @media screen and (max-width: 480px) {
-    .login-form-box {
-        padding: 20px; /* 减少内边距 */
+    .login {
+        display: block; /* 显示.login元素 */
     }
-    .login-title {
-        font-size: 24px; /* 缩小标题字体大小 */
-    }
-    .login-sub-title {
-        font-size: 18px; /* 缩小副标题字体大小 */
-    }
-    .username,
-    .password {
-        width: 100%; /* 输入框宽度占满屏幕 */
-        margin-bottom: 10px; /* 减少底部间距 */
-    }
-    /* 其他需要调整的样式 */
 }
