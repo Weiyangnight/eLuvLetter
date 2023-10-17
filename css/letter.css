@@ -10,15 +10,15 @@
 #wax-half {
 	display: none;
 	/* margin: 0 auto; */
-	margin-top: 40px;
+	margin-top: 46px;
 	/* margin-bottom: 100px; */
-	margin-left: 225px;
+	margin-left: 229px;
 	width: 160px;
 	height: 75px;
 	background: url(../img/wax.png) no-repeat;
 	/* background-position-y: -50px; */
-	background-position: 0px -70px;
-	background-size: 99%;
+	background-position: 0px -72px;
+	background-size: 95%;
 }
 
 #stamp {
