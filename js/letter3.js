@@ -58,7 +58,7 @@ $("#open").click(function () {
 			backSpeed: 50
 		});
 
-		$('#open').find("span").eq(0).css('background-position', "0 -193px");
+		$('#open').find("span").eq(0).css('background-position', "0 -190px");
 
 		envelope_opened = true;
 
